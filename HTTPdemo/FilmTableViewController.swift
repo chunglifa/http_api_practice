@@ -1,35 +1,35 @@
+//
+//  FilmTableViewController.swift
+//  HTTPdemo
+//
+//  Created by Christopher Chung on 7/16/18.
+//  Copyright © 2018 Christopher Chung. All rights reserved.
+//
+
 import UIKit
 import CoreData
 
-class PeopleViewController: UITableViewController {
-    // Hardcoded data for now
-    var people: [NSDictionary] = []
+class FilmTableViewController: UITableViewController {
+    var films: [NSDictionary] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("PeopleViewController in viewDidLoad")
-        getData(from: "http://swapi.co/api/people/")
+        getData(from: "https://swapi.co/api/films/")
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("PeopleViewController in viewWillAppear")
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // if we return - sections we won't have any sections to put our rows in
-        return 1
-    }
+
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return the count of people in our data array
-        return people.count
+        // #warning Incomplete implementation, return the number of rows
+        return films.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Create a generic cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        // set the default cell label to the corresponding element in the people array
-        cell.textLabel?.text = people[indexPath.row]["name"] as? String
-        // return the cell so that it can be rendered
+        cell.textLabel?.text = films[indexPath.row]["title"] as? String
         return cell
     }
     func getData(from url: String){
@@ -48,8 +48,8 @@ class PeopleViewController: UITableViewController {
                 // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary {
                     print(jsonResult["results"])
-                    var newPeople = jsonResult["results"] as! [NSDictionary]
-                    self.people.append(contentsOf: newPeople)
+                    var newFilms = jsonResult["results"] as! [NSDictionary]
+                    self.films.append(contentsOf: newFilms)
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -67,4 +67,6 @@ class PeopleViewController: UITableViewController {
         // running the completion handler. This is async!
         task.resume()
     }
+
+
 }

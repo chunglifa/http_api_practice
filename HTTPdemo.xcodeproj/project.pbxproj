@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83433DD120FD66F6004B8BC3 /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83433DD020FD66F6004B8BC3 /* FilmTableViewController.swift */; };
 		83576E3320F80270006B4451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83576E3220F80270006B4451 /* AppDelegate.swift */; };
 		83576E3520F80270006B4451 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83576E3420F80270006B4451 /* PeopleViewController.swift */; };
 		83576E3820F80270006B4451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83576E3620F80270006B4451 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83433DD020FD66F6004B8BC3 /* FilmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
 		83576E2F20F80270006B4451 /* HTTPdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83576E3220F80270006B4451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83576E3420F80270006B4451 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				83576E3E20F80272006B4451 /* LaunchScreen.storyboard */,
 				83576E4120F80272006B4451 /* Info.plist */,
 				83576E3920F80270006B4451 /* HTTPdemo.xcdatamodeld */,
+				83433DD020FD66F6004B8BC3 /* FilmTableViewController.swift */,
 			);
 			path = HTTPdemo;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				83576E3520F80270006B4451 /* PeopleViewController.swift in Sources */,
 				83576E3B20F80270006B4451 /* HTTPdemo.xcdatamodeld in Sources */,
 				83576E3320F80270006B4451 /* AppDelegate.swift in Sources */,
+				83433DD120FD66F6004B8BC3 /* FilmTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
